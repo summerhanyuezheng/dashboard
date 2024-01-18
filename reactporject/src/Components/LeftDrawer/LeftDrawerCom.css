@@ -1,0 +1,17 @@
+.MuiAppBar-root {
+  background-color: transparent !important;
+}
+
+.MuiToolbar-root {
+  color: black;
+}
+
+/* .css-g3hgs1-MuiBackdrop-root-MuiModal-backdrop {
+  display: none !important;
+  height: 0;
+  width: 0;
+} */
+
+.css-hyum1k-MuiToolbar-root {
+  min-height: 0px;
+}
