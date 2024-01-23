@@ -58,9 +58,6 @@ export default function NavCom() {
 
   return (
     <div className="searchBarWrapper">
-      <Button onClick={toggleDrawer(true)}>
-        <img src={leftIcon} className="leftIcon" alt="Open drawer" />
-      </Button>
       <img src={searchIcon} className="   searchIcon" alt="Search" />
       <input className="searchBar" type="search" placeholder="           Search(Ctrl + /)" />
       <img src={languageIcon} className="languageIcon" alt="Voice Search" />

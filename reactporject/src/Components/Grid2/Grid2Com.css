@@ -1,0 +1,111 @@
+.whole-grid2 {
+  font-family: "Public Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin-left: auto;
+  margin-right: auto;
+  width: 1379px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-style {
+  border-radius: 8px;
+  backdrop-filter: saturate(200%) blur(6px);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: rgba(59, 78, 97, 0.1) 5px 5px 10px 1px;
+}
+
+.left-grid2 {
+  width: 912px;
+  height: 382px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.right-top-grid2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.right-section-grid2 .right-1 {
+  width: 210px;
+  height: 180px;
+  padding: 20px 24px;
+  box-sizing: border-box !important;
+  margin-right: 22px;
+}
+
+.right-section-grid2 .right-2 {
+  width: 210px;
+  height: 180px;
+  padding: 20px 24px;
+  box-sizing: border-box !important;
+}
+
+.right-section-grid2 .right-3 {
+  width: 442px;
+  height: 180px;
+}
+
+.row2-year-dropdown {
+  padding: 8px 12px;
+  border: 1px solid #696cff;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #696cff;
+  font-family: "Public Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.row2-left-chart {
+  width: 531px;
+  height: 312px;
+  background-color: antiquewhite;
+}
+
+.row2-left-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
+.chart78 {
+  width: 134px;
+}
+
+.grey-year {
+  font-size: 14px;
+  color: #32475c99;
+}
+
+.bottom-section {
+  display: flex;
+}
+
+.bottom-section .bs-l {
+  display: flex;
+  justify-content: center;
+  /* Center children on the main axis */
+  gap: 4px;
+}
+
+.bottom-section .bs-r {
+  display: flex;
+  justify-content: center;
+  /* Center children on the main axis */
+  gap: 4px;
+  margin-left: 30px;
+}
+
+.yn-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  margin-left: 5px;
+  font-family: "Public Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}

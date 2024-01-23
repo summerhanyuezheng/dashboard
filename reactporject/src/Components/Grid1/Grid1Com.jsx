@@ -5,7 +5,6 @@ import Button from "@mui/material/Button"
 import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
 import MoreVertIcon from "@mui/icons-material/MoreVert"
-import Popover from "@mui/material/Popover"
 
 export default function HomeGridCom() {
   //右边盒子meun dropdown的state
@@ -21,7 +20,7 @@ export default function HomeGridCom() {
   }
 
   return (
-    <div className="whole-grid">
+    <div className="whole-grid1">
       <div className="row1 ">
         <div className="row1-left grid-style">
           <div className="row1-left-texts">
@@ -44,33 +43,45 @@ export default function HomeGridCom() {
           <h1 className="cash-num">$4,679</h1>
           <h5 className="percent-num">↑ 28.14%</h5>
           {/* meun drop down这里开始 */}
-          {/* The button that will be used to open the Popover */}
-          <Button aria-controls={open ? "simple-popover" : undefined} aria-haspopup="true" aria-expanded={open ? "true" : undefined} onClick={handleClick}>
-            <MoreVertIcon className="menu-icon-row1 " />
-          </Button>
 
-          {/* The Popover component */}
-          <Popover
-            id="simple-popover"
-            open={open}
-            anchorEl={anchorEl}
-            onClose={handleClose}
-            anchorReference="anchorPosition"
-            anchorPosition={{ top: 160, left: 1500 }}
-            anchorOrigin={{
-              vertical: "center",
-              horizontal: "center"
-            }}
-            transformOrigin={{
-              vertical: "center",
-              horizontal: "center"
-            }}
-          >
-            {/* The content inside the Popover */}
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
-          </Popover>
+          <div className="grid1-position-ui-menu">
+            <Button id="demo-positioned-button" aria-controls={open ? "demo-positioned-menu" : undefined} aria-haspopup="true" aria-expanded={open ? "true" : undefined} onClick={handleClick}>
+              <MoreVertIcon className="menu-icon-row1 " />
+            </Button>
+            <Menu
+              id="demo-positioned-menu"
+              aria-labelledby="demo-positioned-button"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              //对于meun,用paperpros去定制其他属性
+              PaperProps={{
+                style: {
+                  width: "98px" // Set your desired width
+                }
+              }}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left"
+              }}
+              transformOrigin={{
+                vertical: "right",
+                horizontal: "center"
+              }}
+              //用‘meunlistpros‘ style 每一个meunlist
+              MenuListProps={{
+                sx: {
+                  ".MuiMenuItem-root": {
+                    fontSize: "16px" // Set your desired font size for all items
+                  }
+                }
+              }}
+            >
+              <MenuItem onClick={handleClose}>Refresh</MenuItem>
+              <MenuItem onClick={handleClose}>Share</MenuItem>
+              <MenuItem onClick={handleClose}>Update</MenuItem>
+            </Menu>
+          </div>
         </div>
       </div>
     </div>
