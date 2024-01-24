@@ -38,7 +38,7 @@ export default function AppsPages({ open }) {
               {/* Instantiate the icon component */}
               <item.Icon />
             </ListItemIcon>
-            <ListItemText primary={item.text} sx={{ display: open ? "block" : "none", color: "#32475c99" }} />
+            <ListItemText primary={item.text} sx={{ display: open ? "block" : "none", color: "#32475c99", marginLeft: "-12px" }} />
           </ListItemButton>
         </ListItem>
       ))}

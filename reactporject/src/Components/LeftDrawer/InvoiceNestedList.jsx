@@ -9,10 +9,10 @@ import Collapse from "@mui/material/Collapse"
 import ExpandLess from "@mui/icons-material/ExpandLess"
 import ExpandMore from "@mui/icons-material/ExpandMore"
 
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined"
+import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined"
 import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded"
 
-export default function DashNestedList({ open }) {
+export default function InvoiceNestedList({ open }) {
   const [openList, setOpenList] = React.useState(false)
 
   const handleClick = () => {
@@ -32,12 +32,12 @@ export default function DashNestedList({ open }) {
       component="nav"
       aria-labelledby="nested-list-subheader"
     >
-      <ListItemButton onClick={handleClick}>
+      <ListItemButton sx={{ marginTop: "-17px" }} onClick={handleClick}>
         <ListItemIcon>
-          <HomeOutlinedIcon sx={{ fontSize: "30px", color: "#32475c99" }} />
+          <DescriptionOutlinedIcon sx={{ fontSize: "27px", color: "#32475c99", pl: "3px" }} />
         </ListItemIcon>
 
-        {open && <ListItemText primary="Dashboard" sx={{ color: "#32475c99", marginLeft: "-15px" }} />}
+        {open && <ListItemText primary="Invoice" sx={{ color: "#32475c99", marginLeft: "-15px" }} />}
         {open && (openList ? <ExpandLess sx={{ color: "#32475c99" }} /> : <ExpandMore sx={{ color: "#32475c99" }} />)}
       </ListItemButton>
 
@@ -47,19 +47,25 @@ export default function DashNestedList({ open }) {
             <ListItemIcon>
               <FiberManualRecordRoundedIcon sx={{ fontSize: "10px", color: "#32475c99" }} />
             </ListItemIcon>
-            <ListItemText primary="Analytics" sx={{ marginLeft: "-22px" }} />
+            <ListItemText primary="List" sx={{ marginLeft: "-22px" }} />
           </ListItemButton>
           <ListItemButton sx={{ pl: 3 }}>
             <ListItemIcon>
               <FiberManualRecordRoundedIcon sx={{ fontSize: "10px", color: "#32475c99" }} />
             </ListItemIcon>
-            <ListItemText primary="CRM" sx={{ marginLeft: "-22px" }} />
+            <ListItemText primary="Preview" sx={{ marginLeft: "-22px" }} />
           </ListItemButton>
           <ListItemButton sx={{ pl: 3 }}>
             <ListItemIcon>
               <FiberManualRecordRoundedIcon sx={{ fontSize: "10px", color: "#32475c99" }} />
             </ListItemIcon>
-            <ListItemText primary="eCommerce" sx={{ marginLeft: "-22px" }} />
+            <ListItemText primary="Edit" sx={{ marginLeft: "-22px" }} />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 3 }}>
+            <ListItemIcon>
+              <FiberManualRecordRoundedIcon sx={{ fontSize: "10px", color: "#32475c99" }} />
+            </ListItemIcon>
+            <ListItemText primary="Add" sx={{ marginLeft: "-22px" }} />
           </ListItemButton>
         </List>
       </Collapse>

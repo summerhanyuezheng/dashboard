@@ -13,6 +13,10 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight"
 import "./LeftDrawerCom.css"
 import DashNestedList from "./DashNestedList"
 import AppsPages from "./AppsPages"
+import InvoiceNestedList from "./InvoiceNestedList"
+import UserNestedList from "./UserNestedList"
+import RolesNestedList from "./RolesNestedList"
+import logo from "./logo&name.jpg"
 
 const drawerWidth = 240
 
@@ -77,9 +81,11 @@ export default function MiniDrawer() {
     <Box sx={{ display: "flex" }}>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          sneat
+          <div>
+            <img src={logo} alt="" style={{ width: "100px", marginLeft: "-250px", marginTop: "15px" }} />
+          </div>
           {open ? (
-            <IconButton onClick={handleDrawerClose}>{theme.direction === "rtl" ? <ChevronRightIcon /> : <ChevronLeftIcon />}</IconButton>
+            <IconButton onClick={handleDrawerClose}>{theme.direction === "rtl" ? <ChevronRightIcon /> : <ChevronLeftIcon sx={{ color: "#32475c99", marginTop: "10px" }} />}</IconButton>
           ) : (
             <IconButton
               color="inherit"
@@ -91,12 +97,12 @@ export default function MiniDrawer() {
                 ...(open && { display: "none" })
               }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ color: "#696cff", marginTop: "10px", marginLeft: "-35px", Color: "#696cff29" }} />
             </IconButton>
           )}
         </DrawerHeader>
         {/* ----------------这里加入nested list 组件------- */}
-        <DashNestedList isDrawerOpen={open}></DashNestedList>
+        <DashNestedList open={open}></DashNestedList>
         {/* ----------APPS & PAGES分隔符--------------- */}
         {/* 三目判断，当抽屉关闭时只显示分隔符 */}
         {open ? (
@@ -112,11 +118,13 @@ export default function MiniDrawer() {
 
         <AppsPages open={open}></AppsPages>
         {/* ----------invoice nestedlist--------------- */}
+        <InvoiceNestedList open={open}></InvoiceNestedList>
+        {/* ----------user nestedlist--------------- */}
+        <UserNestedList open={open}></UserNestedList>
+        {/* ----------roles nestedlist--------------- */}
+        <RolesNestedList open={open}></RolesNestedList>
         <Divider />
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
-      </Box>
     </Box>
   )
 }
