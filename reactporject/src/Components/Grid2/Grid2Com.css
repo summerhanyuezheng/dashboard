@@ -18,7 +18,7 @@
 
 .left-grid2 {
   width: 912px;
-  height: 382px;
+  height: 362px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -46,7 +46,7 @@
 
 .right-section-grid2 .right-3 {
   width: 442px;
-  height: 180px;
+  height: 160px;
 }
 
 .row2-year-dropdown {
@@ -61,8 +61,7 @@
 
 .row2-left-chart {
   width: 531px;
-  height: 312px;
-  background-color: antiquewhite;
+  height: 382px;
 }
 
 .row2-left-right {
@@ -108,4 +107,36 @@
   align-items: start;
   margin-left: 5px;
   font-family: "Public Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.total-revenue-chart {
+  background-color: transparent;
+  margin-left: 27px;
+  margin-top: 30px;
+  scale: 1.05;
+}
+
+.total-Revenue-text {
+  color: rgba(50, 71, 92, 0.87);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.dot-and-label-one,
+.dot-and-label-two {
+  display: flex;
+  align-items: center;
+}
+
+.dot-and-label-two {
+  margin-left: 20px;
+}
+
+.big-flex {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 15px;
 }

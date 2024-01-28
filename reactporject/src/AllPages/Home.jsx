@@ -3,6 +3,7 @@ import NavCom from "../Components/Nav/NavCom"
 import Grid1Com from "../Components/Grid1/Grid1Com"
 import LeftDrawerCom from "../Components/LeftDrawer/LeftDrawerCom"
 import Grid2Com from "../Components/Grid2/Grid2Com"
+import Grid2Chart from "../Components/ChartJsTest/Grid2Chart"
 
 export default function Home() {
   return (

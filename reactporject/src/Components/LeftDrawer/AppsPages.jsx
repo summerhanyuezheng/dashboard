@@ -32,7 +32,7 @@ export default function AppsPages({ open }) {
                 minWidth: 0,
                 mr: open ? 3 : "auto",
                 justifyContent: "center",
-                color: "#32475c99"
+                color: "blue"
               }}
             >
               {/* Instantiate the icon component */}

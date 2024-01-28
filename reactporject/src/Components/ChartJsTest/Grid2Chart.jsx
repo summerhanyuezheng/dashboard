@@ -1,24 +1,23 @@
 import React, { useState } from "react"
-import "./Grid2Com.css"
+
 import chart78 from "./78chart.jpg"
 import Avatar from "@mui/material/Avatar"
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined"
 import SnippetFolderOutlinedIcon from "@mui/icons-material/SnippetFolderOutlined"
 import { Bar } from "react-chartjs-2"
 import "chart.js/auto"
-import CircleIcon from "@mui/icons-material/Circle"
 
 export default function Grid2Chart() {
   const [chartData, setChartData] = useState({
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July"],
     datasets: [
       {
-        label: "none",
+        label: "2023",
         data: [18, 5, 12, 28, 18, 11, 8],
         backgroundColor: "#696cff"
       },
       {
-        // label: "2022",
+        label: "2022",
         data: [-15, -15, -9, -12, -3, -17, -14],
         backgroundColor: "#35c6df"
       }
@@ -30,43 +29,27 @@ export default function Grid2Chart() {
     maintainAspectRatio: false,
     barThickness: 12,
     borderRadius: 10,
-
-    layout: {
-      padding: {
-        top: 0,
-        right: 10,
-        bottom: 160, // Increase the bottom padding
-        left: 0
-      }
-    },
     plugins: {
       legend: {
         //legend 是关于labels 的修改
-        display: false
-        // position: "top",
-        // align: "start",
-
-        // labels: {
-        //   usePointStyle: true,
-        //   boxHeight: 6 //小圆点的大小
-        // }
+        position: "top",
+        align: "start",
+        labels: {
+          usePointStyle: true,
+          boxHeight: 6 //小圆点的大小
+        }
+      },
+      title: {
+        display: true,
+        text: "Total Revenue",
+        align: "start",
+        color: "#32475cde",
+        font: {
+          size: 15,
+          weight: "normal"
+        }
       }
     },
-    // title: {
-    //   display: true,
-    //   text: "Total Revenue",
-    //   align: "start",
-    //   padding: {
-    //     top: 0,
-    //     bottom: 5
-    //   },
-    //   color: "#32475cde",
-    //   font: {
-    //     size: 15,
-    //     weight: "normal"
-    //   }
-    // }
-    // },
     scales: {
       x: {
         ticks: {
@@ -87,19 +70,6 @@ export default function Grid2Chart() {
     <div className="whole-grid2">
       <div className="left-grid2 grid-style">
         <div className="row2-left-chart">
-          <h3 className="total-Revenue-text">Total Revenue</h3>
-
-          <div className="big-flex">
-            <div className="dot-and-label-one">
-              <CircleIcon sx={{ color: "#696cff", fontSize: "5px" }}></CircleIcon> <span style={{ color: "#32475c99", fontSize: "14px", marginLeft: "5px" }}>2023</span>
-            </div>
-            <div className="dot-and-label-two">
-              <CircleIcon sx={{ color: "#35c6df", fontSize: "5px" }}></CircleIcon>
-
-              <span style={{ color: "#32475c99", fontSize: "14px", marginLeft: "5px" }}>2022</span>
-            </div>
-          </div>
-
           <Bar className="total-revenue-chart" data={chartData} options={chartOptions} />
         </div>
         <div className="row2-left-right">
