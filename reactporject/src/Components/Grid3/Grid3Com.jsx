@@ -1,14 +1,12 @@
 import React, { useState } from "react"
-import "./Grid1Com.css"
-
+import "./Grid3Com.css"
 import Button from "@mui/material/Button"
 import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
 import MoreVertIcon from "@mui/icons-material/MoreVert"
-import OrderLineChart from "./OrderLineChart"
+import DonutChart from "./DonutChart"
 
-export default function Grid1Com() {
-  //右边盒子meun dropdown的state
+export default function Grid3Com() {
   const [anchorEl, setAnchorEl] = useState(null)
   const open = Boolean(anchorEl)
 
@@ -21,31 +19,18 @@ export default function Grid1Com() {
   }
 
   return (
-    <div className="whole-grid1">
-      <div className="row1 ">
-        <div className="row1-left grid-style">
-          <div className="row1-left-texts">
-            <h2>Congratulations John! 🎉</h2>
-            <p>You have done 72% more sales today. Check your new badge in your profile.</p>
-            <button>VIEW BADGES</button>
+    <div className="whole-grid3">
+      <div className="grid3-left grid-style ">
+        <div className="order-section">
+          <div className="text">
+            <h3 className="dark-grey-title" style={{ marginBottom: "10px", marginTop: "0px" }}>
+              Order Statistics
+            </h3>
+            <h5 className="light-grey-subtitle">42.82k Total Sales</h5>
           </div>
-          <div className="row1-left-img">
-            <img src="https://greakproject.vercel.app/images/cards/illustration-john-light.png" alt="" />
-          </div>
-        </div>
-        <div className="row1-right1 grid-style">
-          <h3 className="top-grey-bold-sub">Order</h3>
-          <h1 className="cash-num">276k</h1>
-          <OrderLineChart></OrderLineChart>
-        </div>
-        <div className="row1-right2 grid-style">
-          <img src="https://greakproject.vercel.app/images/cards/stats-vertical-wallet.png" alt="" />
-          <h3 className="grey-bold-sub">Sales</h3>
-          <h1 className="cash-num">$4,679</h1>
-          <h5 className="percent-num">↑ 28.14%</h5>
           {/* meun drop down这里开始 */}
 
-          <div className="grid1-position-ui-menu">
+          <div className="grid3-position-ui-menu">
             <Button
               id="demo-positioned-button"
               aria-controls={open ? "demo-positioned-menu" : undefined}
@@ -105,7 +90,20 @@ export default function Grid1Com() {
             </Menu>
           </div>
         </div>
+        <div className="total-order">
+          <div style={{ marginRight: "100px" }}>
+            <span style={{ fontSize: "32px", color: "#32475cde" }}>8,258</span>
+            <br />
+            <span className="light-grey-subtitle">Total orders</span>
+          </div>
+          {/* -------Doughnut chart------- */}
+
+          <DonutChart></DonutChart>
+        </div>
+        <div className="order-datalist"> </div>
       </div>
+      <div className="grid3-middle grid-style ">2</div>
+      <div className="grid3-right grid-style ">3</div>
     </div>
   )
 }

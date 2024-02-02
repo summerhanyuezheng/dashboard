@@ -35,6 +35,12 @@
   padding: 20px 24px;
   box-sizing: border-box !important;
   margin-right: 22px;
+  text-align: left;
+}
+
+.right-section-grid2 .right-1 img {
+  width: 42px;
+  height: 42px;
 }
 
 .right-section-grid2 .right-2 {
@@ -111,9 +117,9 @@
 
 .total-revenue-chart {
   background-color: transparent;
-  margin-left: 27px;
-  margin-top: 30px;
-  scale: 1.05;
+  margin-left: 20px;
+  margin-top: 10px;
+  /* scale: 1.05; */
 }
 
 .total-Revenue-text {
@@ -139,4 +145,31 @@
   display: flex;
   margin-left: 20px;
   margin-top: 15px;
+}
+
+.right-3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-report-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.dark-grey-title {
+  color: #32475cde;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.year2024 {
+  color: #ffab00;
+  font-size: 13px;
+  padding: 5px 10px;
+  background-color: #ffab0030;
+  border-radius: 5px;
 }

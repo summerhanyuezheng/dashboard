@@ -3,7 +3,7 @@ import NavCom from "../Components/Nav/NavCom"
 import Grid1Com from "../Components/Grid1/Grid1Com"
 import LeftDrawerCom from "../Components/LeftDrawer/LeftDrawerCom"
 import Grid2Com from "../Components/Grid2/Grid2Com"
-import Grid2Chart from "../Components/ChartJsTest/Grid2Chart"
+import Grid3Com from "../Components/Grid3/Grid3Com"
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       {/* <div style={{ height: "100px" }}></div> */}
       <Grid1Com></Grid1Com>
       <Grid2Com></Grid2Com>
+      <Grid3Com></Grid3Com>
     </div>
   )
 }
