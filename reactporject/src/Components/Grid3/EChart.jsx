@@ -21,13 +21,13 @@ function EChart() {
         {
           name: "Access From",
           type: "pie",
-          radius: ["40%", "60%"],
+          radius: ["40%", "55%"],
           avoidLabelOverlap: true,
 
           itemStyle: {
-            borderRadius: 2,
+            borderRadius: 1,
             borderColor: "#fff",
-            borderWidth: 8
+            borderWidth: 6
           },
           label: {
             show: true,

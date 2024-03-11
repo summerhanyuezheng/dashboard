@@ -17,6 +17,18 @@ import InvoiceNestedList from "./InvoiceNestedList"
 import UserNestedList from "./UserNestedList"
 import RolesNestedList from "./RolesNestedList"
 import logo from "./logo&name.jpg"
+import PagesNestedList from "./Pages/PagesNestedList"
+
+import AuthPageNested from "./AuthPages/AuthPageNested"
+import WizardExamplesNested from "./WizardExamplesNested"
+import DialogExamplesNested from "./DialogExamplesNested"
+import UserInterface from "./UserInterface"
+import CardsNestedList from "./Cards"
+import ComponentsNestedList from "./Components"
+import FormTable from "./FormTable"
+import FormElement from "./FormElement"
+import ChartsNestedList from "./Charts"
+import OthersNestedList from "./Others"
 
 const drawerWidth = 240
 
@@ -46,7 +58,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "flex-end",
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
+
   ...theme.mixins.toolbar
 }))
 
@@ -65,7 +77,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: prop => prop !== "open" })
   })
 }))
 
-export default function MiniDrawer() {
+export default function LeftDrawerCom() {
   const theme = useTheme()
   const [open, setOpen] = React.useState(false)
 
@@ -82,7 +94,7 @@ export default function MiniDrawer() {
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <div>
-            <img src={logo} alt="" style={{ width: "100px", marginLeft: "-250px", marginTop: "15px" }} />
+            <img src={logo} alt="" style={{ width: "100px", marginLeft: "-220px", marginTop: "15px" }} />
           </div>
           {open ? (
             <IconButton onClick={handleDrawerClose}>{theme.direction === "rtl" ? <ChevronRightIcon /> : <ChevronLeftIcon sx={{ color: "#32475c99", marginTop: "10px" }} />}</IconButton>
@@ -119,11 +131,62 @@ export default function MiniDrawer() {
         <AppsPages open={open}></AppsPages>
         {/* ----------invoice nestedlist--------------- */}
         <InvoiceNestedList open={open}></InvoiceNestedList>
+
         {/* ----------user nestedlist--------------- */}
         <UserNestedList open={open}></UserNestedList>
         {/* ----------roles nestedlist--------------- */}
         <RolesNestedList open={open}></RolesNestedList>
-        <Divider />
+        {/* ----------pages nestedlist--------------- */}
+        <PagesNestedList open={open}></PagesNestedList>
+        {/* ----------AuthPages nestedlist--------------- */}
+        <AuthPageNested open={open}></AuthPageNested>
+        {/* ----------Wizard Examples nestedlist--------------- */}
+        <WizardExamplesNested open={open}></WizardExamplesNested>
+        {/* ----------Wizard Examples nestedlist--------------- */}
+        <DialogExamplesNested open={open}></DialogExamplesNested>
+
+        {open ? (
+          <Box sx={{ display: "flex", alignItems: "center", p: 1 }}>
+            <Divider sx={{ width: 20 }} />
+            <Typography variant="caption" sx={{ px: 2, color: "#32475c61" }}>
+              USER INTERFACE
+            </Typography>
+          </Box>
+        ) : (
+          <Divider /> // Only show the line when the drawer is closed
+        )}
+
+        {/* 挂载UserInterface 没有连环套的部分 */}
+        <UserInterface open={open}></UserInterface>
+        {/* ----------Cards nestedlist--------------- */}
+        <CardsNestedList open={open}></CardsNestedList>
+        {/* ----------Components nestedlist--------------- */}
+        <ComponentsNestedList open={open}></ComponentsNestedList>
+
+        {open ? (
+          <Box sx={{ display: "flex", alignItems: "center", p: 1 }}>
+            <Divider sx={{ width: 20 }} />
+            <Typography variant="caption" sx={{ px: 2, color: "#32475c61" }}>
+              FORMS & TABLES
+            </Typography>
+          </Box>
+        ) : (
+          <Divider /> // Only show the line when the drawer is closed
+        )}
+        {/* <FormTable open={open}></FormTable> */}
+        <FormElement open={open}></FormElement>
+        {open ? (
+          <Box sx={{ display: "flex", alignItems: "center", p: 1 }}>
+            <Divider sx={{ width: 20 }} />
+            <Typography variant="caption" sx={{ px: 2, color: "#32475c61" }}>
+              CHARTS & MISC
+            </Typography>
+          </Box>
+        ) : (
+          <Divider /> // Only show the line when the drawer is closed
+        )}
+        {/* ----------Charts nestedlist--------------- */}
+        <ChartsNestedList open={open}></ChartsNestedList>
       </Drawer>
     </Box>
   )

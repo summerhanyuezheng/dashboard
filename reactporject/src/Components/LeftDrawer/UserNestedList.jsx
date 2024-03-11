@@ -48,7 +48,7 @@ export default function UserNestedList({ open }) {
         </ListItemIcon>
         <ListItemText primary="Drafts" />
       </ListItemButton> */}
-      <ListItemButton sx={{ marginTop: "-17px" }} onClick={handleClick}>
+      <ListItemButton sx={{ marginTop: "-10px" }} onClick={handleClick}>
         <ListItemIcon>
           <PersonOutlineOutlinedIcon sx={{ fontSize: "27px", color: "#32475c99", pl: "3px" }} />
         </ListItemIcon>

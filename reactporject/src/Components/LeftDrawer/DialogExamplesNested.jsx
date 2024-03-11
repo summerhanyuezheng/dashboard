@@ -9,10 +9,10 @@ import Collapse from "@mui/material/Collapse"
 import ExpandLess from "@mui/icons-material/ExpandLess"
 import ExpandMore from "@mui/icons-material/ExpandMore"
 
-import GppGoodOutlinedIcon from "@mui/icons-material/GppGoodOutlined"
+import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined"
 import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded"
 
-export default function RolesNestedList({ open }) {
+export default function DialogExamplesNested({ open }) {
   const [openList, setOpenList] = React.useState(false)
 
   const handleClick = () => {
@@ -34,28 +34,12 @@ export default function RolesNestedList({ open }) {
     >
       <ListItemButton sx={{ marginTop: "-10px" }} onClick={handleClick}>
         <ListItemIcon>
-          <GppGoodOutlinedIcon sx={{ fontSize: "27px", color: "#32475c99", pl: "3px" }} />
+          <DriveFolderUploadOutlinedIcon sx={{ fontSize: "27px", color: "#32475c99", pl: "3px" }} />
         </ListItemIcon>
 
-        {open && <ListItemText primary="Roles & Permiss.." sx={{ color: "#32475c99", marginLeft: "-15px" }} />}
+        {open && <ListItemText primary="Dialog Examples" sx={{ color: "#32475c99", marginLeft: "-15px" }} />}
         {open && (openList ? <ExpandLess sx={{ color: "#32475c99" }} /> : <ExpandMore sx={{ color: "#32475c99" }} />)}
       </ListItemButton>
-      <Collapse in={open && openList} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 3 }}>
-            <ListItemIcon>
-              <FiberManualRecordRoundedIcon sx={{ fontSize: "10px", color: "#32475c99" }} />
-            </ListItemIcon>
-            <ListItemText primary="Roles" sx={{ marginLeft: "-22px" }} />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 3 }}>
-            <ListItemIcon>
-              <FiberManualRecordRoundedIcon sx={{ fontSize: "10px", color: "#32475c99" }} />
-            </ListItemIcon>
-            <ListItemText primary="Permission" sx={{ marginLeft: "-22px" }} />
-          </ListItemButton>
-        </List>
-      </Collapse>
     </List>
   )
 }

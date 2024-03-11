@@ -21,7 +21,7 @@ export default function TabLineChart() {
   const [chartOptions3, setChartOptions3] = useState({
     responsive: true,
     maintainAspectRatio: true,
-    aspectRatio: 2.2,
+    aspectRatio: 2.1,
     plugins: {
       legend: {
         //legend 是关于labels 的修改

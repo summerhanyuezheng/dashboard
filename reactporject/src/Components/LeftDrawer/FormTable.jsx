@@ -1,7 +1,10 @@
 import React from "react"
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined"
-import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined"
-import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined"
+import ListOutlinedIcon from "@mui/icons-material/ListOutlined"
+import ChecklistOutlinedIcon from "@mui/icons-material/ChecklistOutlined"
+import ViewArrayOutlinedIcon from "@mui/icons-material/ViewArrayOutlined"
+import ViewColumnOutlinedIcon from "@mui/icons-material/ViewColumnOutlined"
+import ViewModuleOutlinedIcon from "@mui/icons-material/ViewModuleOutlined"
+
 import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
 import ListItemButton from "@mui/material/ListItemButton"
@@ -10,12 +13,14 @@ import ListItemText from "@mui/material/ListItemText"
 
 // Define an array with objects containing both the text and the corresponding icon component
 const menuItems = [
-  { text: "Email", Icon: EmailOutlinedIcon },
-  { text: "Chat", Icon: ChatBubbleOutlineOutlinedIcon },
-  { text: "Calendar", Icon: CalendarMonthOutlinedIcon }
+  { text: "Form Layouts", Icon: ListOutlinedIcon },
+  { text: "Form Validation", Icon: ChecklistOutlinedIcon },
+  { text: "Form Wizard", Icon: ViewArrayOutlinedIcon },
+  { text: "Table", Icon: ViewColumnOutlinedIcon },
+  { text: "Mui DataGrid", Icon: ViewModuleOutlinedIcon }
 ]
 
-export default function AppsPages({ open }) {
+export default function FormTable({ open }) {
   return (
     <List>
       {menuItems.map((item, index) => (

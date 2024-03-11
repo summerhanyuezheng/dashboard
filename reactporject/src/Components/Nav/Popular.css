@@ -1,0 +1,16 @@
+.list-popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 165px;
+}
+
+.each-item-popular {
+  display: flex;
+  align-items: center;
+}
+
+.icon-size-popular {
+  font-size: 20px;
+  margin-right: 10px;
+}

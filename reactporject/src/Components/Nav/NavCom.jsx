@@ -1,26 +1,20 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
-
 import "./NavCom.css"
 import searchIcon from "./searchBar.png"
 import languageIcon from "./language.png"
 import moonIcon from "./moon.png"
 import settingIcon from "./setting.png"
 import alarmIcon from "./alarm.png"
-import profileIcon from "./profile.png"
-import leftIcon from "./left.png"
-
 import Drawer from "@mui/material/Drawer"
-import Button from "@mui/material/Button"
 import List from "@mui/material/List"
-import ListItem from "@mui/material/ListItem"
-import ListItemButton from "@mui/material/ListItemButton"
-import ListItemIcon from "@mui/material/ListItemIcon"
-import ListItemText from "@mui/material/ListItemText"
-import InboxIcon from "@mui/icons-material/Inbox"
 import Box from "@mui/material/Box"
 import Menu from "@mui/material/Menu"
-import MenuItem from "@mui/material/MenuItem"
+import { IconButton } from "@mui/material"
+
+import ModalEffect from "./ModalEffect"
+import ProfileIcon from "./ProfileIcon"
+import ProfileDropDown from "./ProfileDropDown"
 
 export default function NavCom() {
   //profileICon dropdown的页面跳转：
@@ -45,33 +39,44 @@ export default function NavCom() {
       <List>{/* ... list items ... */}</List>
     </Box>
   )
+  // State for modal
+  const [searchModalOpen, setSearchModalOpen] = useState(false)
+  const handleSearchModalOpen = () => setSearchModalOpen(true)
+  const handleSearchModalClose = () => setSearchModalOpen(false)
 
   //profileIcon 点击drop down 的state 和function:
-  const [profileMenuAnchorEl, setProfileMenuAnchorEl] = useState(null)
-  const isProfileMenuOpen = Boolean(profileMenuAnchorEl)
-  const handleProfileMenuClick = event => {
-    setProfileMenuAnchorEl(event.currentTarget)
+
+  const [profileDropDownOpen, setProfileDropDownOpen] = useState(false)
+  const [profileDropDownAnchorEl, setProfileDropDownAnchorEl] = useState(null)
+
+  // Function to handle opening the profile dropdown
+  const handleProfileDropDownOpen = event => {
+    setProfileDropDownAnchorEl(event.currentTarget)
+    setProfileDropDownOpen(true)
   }
-  const handleProfileMenuClose = () => {
-    setProfileMenuAnchorEl(null)
+
+  // Function to handle closing the profile dropdown
+  const handleProfileDropDownClose = () => {
+    setProfileDropDownOpen(false)
   }
 
   return (
     <div className="searchBarWrapper">
-      <img src={searchIcon} className="   searchIcon" alt="Search" />
-      <input className="searchBar" type="search" placeholder="           Search(Ctrl + /)" />
+      <img src={searchIcon} className="searchIcon" alt="Search" onClick={handleSearchModalOpen} /> <input className="searchBar" type="search" placeholder="          Search(Ctrl + /)" onClick={handleSearchModalOpen} />
       <img src={languageIcon} className="languageIcon" alt="Voice Search" />
       <img src={moonIcon} className="moonIcon" alt="Settings" />
       <img src={settingIcon} className="settingIcon" alt="Settings" />
       <img src={alarmIcon} className="alarmIcon" alt="Settings" />
-      <img src={profileIcon} className="profileIcon" alt="Profile" onClick={handleProfileMenuClick} />
-
+      {/* <img src={profileIcon} className="profileIcon" alt="Profile" onClick={handleProfileMenuClick} /> */}
+      <IconButton className="profileIcon" onClick={handleProfileDropDownOpen}>
+        <ProfileIcon></ProfileIcon>
+      </IconButton>
       {/* Profile dropdown menu materialUL 部分*/}
       <Menu
-        id="profile-menu"
-        anchorEl={profileMenuAnchorEl}
-        open={isProfileMenuOpen}
-        onClose={handleProfileMenuClose}
+        id="profile-dropdown-menu"
+        anchorEl={profileDropDownAnchorEl}
+        open={profileDropDownOpen}
+        onClose={handleProfileDropDownClose}
         anchorOrigin={{
           vertical: "bottom",
           horizontal: "right"
@@ -81,22 +86,19 @@ export default function NavCom() {
           horizontal: "right"
         }}
       >
-        <MenuItem onClick={handleProfileMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={handleProfileMenuClose}>My account</MenuItem>
-        <MenuItem
-          onClick={() => {
-            handleProfileMenuClose()
-            handleLogout()
-          }}
-        >
-          Logout
-        </MenuItem>
+        {/* 挂载dropdown */}
+        <ProfileDropDown onLogout={handleLogout} />
       </Menu>
-
       {/*  left drawer MaterialUI part */}
       <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
         {list}
       </Drawer>
+      {/* 挂载modal */}
+      {/* 
+      const [searchModalOpen, setSearchModalOpen] = useState(false)
+  const handleSearchModalOpen = () => setSearchModalOpen(true)
+  const handleSearchModalClose = () => setSearchModalOpen(false) */}
+      <ModalEffect open={searchModalOpen} handleClose={handleSearchModalClose} />
     </div>
   )
 }
