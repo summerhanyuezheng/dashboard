@@ -1,3 +1,4 @@
 # dashboard
 
-## URL: https://dashboardplus.netlify.app/home
+## URL: https://dashboardplus.netlify.app/
+
