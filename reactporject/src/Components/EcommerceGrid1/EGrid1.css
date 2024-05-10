@@ -1,0 +1,69 @@
+.e-grid-row-one{
+    width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 110px;
+}
+
+.katie{
+    width: 372px;
+    height: 163px;
+    padding: 20px 24px;
+}
+
+
+.right-row-one {
+    width: 824px;
+    height: 163px;
+    padding: 20px 24px;
+}
+
+.left-katie h3{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #32475cde;
+}
+
+.left-katie h4{
+    font-size: 0.875rem;
+    color: #32475c99;
+    font-weight: 500;
+}
+.left-katie button{
+    background-color: #696cff;
+    color: white;
+    box-shadow: rgba(105, 108, 255, 0.4) 0px 2px 4px 0px;
+    outline: 0px;
+    border: 0px;
+    padding: 4px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 24px;
+    font-size: 0.8rem;
+    width: 109px;
+    
+}
+
+.trophy-pic{
+    width: 96px;
+    height: 155px;
+    position: relative;
+    bottom: -30px;
+
+}
+
+
+.left-katie{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+
+}
+
+.katie{
+    display: flex;
+    justify-content: space-between;
+}

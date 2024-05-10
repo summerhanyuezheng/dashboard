@@ -3,6 +3,8 @@ import { Navigate } from "react-router-dom"
 
 import LogIn from "../AllPages/LogIn"
 
+import ECommerce from "../AllPages/ECommerce"
+
 const routes = [
   {
     path: "/login",
@@ -15,7 +17,12 @@ const routes = [
   {
     path: "/",
     element: <Navigate to="/home" />
-  }
+  },
+  {
+    path: "/ecommerce",
+    element: <ECommerce></ECommerce>
+  },
+  
 ]
 
 export default routes

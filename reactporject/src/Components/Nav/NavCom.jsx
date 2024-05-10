@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate,useLocation } from "react-router-dom"
 import "./NavCom.css"
 import searchIcon from "./searchBar.png"
 import languageIcon from "./language.png"
@@ -19,6 +19,7 @@ import ProfileDropDown from "./ProfileDropDown"
 export default function NavCom() {
   //profileICon dropdown的页面跳转：
   const navigate = useNavigate()
+  const location = useLocation()  // Initialize useLocation
   const handleLogout = () => {
     navigate("/login")
   }
@@ -60,8 +61,12 @@ export default function NavCom() {
     setProfileDropDownOpen(false)
   }
 
+
+  // Determine the width based on the current path
+  const searchBarWidth = location.pathname === "/ecommerce" ? "1320px" : "1380px"
+
   return (
-    <div className="searchBarWrapper">
+    <div className="searchBarWrapper" style={{ width: searchBarWidth }}>
       <img src={searchIcon} className="searchIcon" alt="Search" onClick={handleSearchModalOpen} /> <input className="searchBar" type="search" placeholder="          Search(Ctrl + /)" onClick={handleSearchModalOpen} />
       <img src={languageIcon} className="languageIcon" alt="Voice Search" />
       <img src={moonIcon} className="moonIcon" alt="Settings" />
