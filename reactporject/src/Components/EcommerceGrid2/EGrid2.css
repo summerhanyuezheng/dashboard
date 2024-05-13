@@ -1,0 +1,190 @@
+.e-grid-two{
+    width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+}
+
+
+.e2-sales-profit, .e2-expense-transaction{
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+}
+
+
+.e2-sales, .e2-profit, .e2-expense, .e2-transaction{
+    width: 158px;
+    height: 144px;
+    padding: 20px 20px;
+}
+
+
+.e2-left-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.e2-expense-transaction{
+    margin-top: 24px;
+}
+
+
+
+
+.e2-sales, .e2-transaction{
+    text-align: left;
+}
+.e2-sales img,
+.e2-transaction img{
+ width: 42px;
+  height: 42px;
+  
+}
+
+
+.drop-down-mui{
+    position: relative;
+  top: -150px;
+  left: 120px;
+}
+
+.profit-chart{
+    width: 185px;
+    
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+
+.e2-expense h5{
+    font-size: 0.875rem;
+    color: #32475c99;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.expense-chart{
+    width: 158px;
+    height: 65px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.expense-chart h1{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 40px;
+    left: 49px;
+}
+
+
+.e2-total-income h4,
+.e2-report h4{
+    font-size: 0.875rem;
+    color: #32475c99;
+    font-weight: 500;
+
+}
+
+
+.e2-right{
+    width: 867px;
+    height: 392px;
+    display: flex;
+    padding:15px 15px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.total-income-chart{
+    width: 570px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.e2-total-income{
+    border-right: 1px solid lightgray;
+}
+
+.e2-report{
+    margin-left: 15px;
+    position: relative;
+}
+.income-dropdown-mui{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.three-boxes{
+    width: 240px;
+    height: 241px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+   
+}
+
+.boxname-money{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+   
+}
+
+.each-box-style{
+    width: 215px;
+    height: 50px;
+    background-color: rgb(245,245,249);
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    
+}
+
+.each-box-style img{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    
+}
+
+.boxname-money h5{
+    font-size: 1rem;
+    color: #32475c99;
+    font-weight: 500;
+}
+
+.boxname-money h3{
+    font-size: 1.125rem;
+    color:#32475cde;
+    font-weight: 500;
+}
+
+
+
+.each-box-img img{
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+.each-box-img{
+    margin-left: 15px;
+}
+
+.percent-num-align{
+    margin-left: 20px;
+    
+    margin-top: 20px;
+
+}
