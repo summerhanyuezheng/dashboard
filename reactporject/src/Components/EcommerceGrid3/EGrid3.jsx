@@ -118,7 +118,7 @@ export default function EGrid3() {
           </div>
           <span className="july-2024">JULY 2024</span>
             </div>
-            <div className="expense-chart">
+            <div className="expense-bar-chart">
               <ExpenseChart></ExpenseChart>
             </div>
           </div>
