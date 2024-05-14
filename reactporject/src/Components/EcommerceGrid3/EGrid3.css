@@ -1,0 +1,160 @@
+.e-grid-row-three{
+    width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+
+}
+
+
+.performance, .conversion-rate {
+    width: 420px;
+    height: 443px;
+}
+
+
+.revenue-and-sales{
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+
+}
+
+.e3-revenue, .e3-sales{
+    width: 158px;
+    height: 144px;
+    padding: 20px 20px;
+    text-align: left;
+
+}
+
+.e3-expense{
+    width: 380px;
+    height: 195px;
+    padding: 20px;
+    padding-top: 14px;
+    margin-top: 28px;
+}
+
+.radar-chart{
+    width: 372px;
+    height: 313px;
+    margin-top: 20px;
+}
+
+.e3-performance, .conversion-rate {
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+}
+.e3-performance span{
+    font-size: 0.875rem;
+    color: #32475c99;
+    font-weight: 500;
+    line-height: 1.5;
+    
+}
+
+.e3-performance-dropdown, .e3-conversion-rate-dropdown{
+    position: absolute;
+    right: 0;
+}
+
+.conversion-rate h4{
+    font-size: 0.875rem;
+    color: #32475c99;
+    font-weight: 500;
+}
+
+
+.e3-conversion-chart{
+    width: 180px;
+    height: 70px;
+   
+}
+
+.e3-num-chart{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.coversion-bottom{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.each-bottom-box{
+    display: flex;
+    justify-content: space-between;
+    width: 372px;
+    height: 40px;
+    margin-bottom: 25px;
+    
+}
+
+.action-num{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+}
+
+.action-num h3{
+    font-size: 1rem;
+    color: #32475cde;
+    font-weight: 600;
+}
+
+.action-num h5{
+    font-size: 0.875rem;
+    color: #32475c99;
+    font-weight: 500;
+}
+
+.blue-34{
+    padding: 0rem 0.625rem;
+    color: rgb(3, 195, 236);
+    background-color: rgba(3, 195, 236,0.2);
+    width: 45px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+.e3-sales h4{
+    font-size: 0.875rem;
+    color: #32475c99;
+    font-weight: 500;
+}
+
+
+.expense-left-flex{
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    justify-content: space-around;
+}
+
+.july-2024{
+    padding:8px 10px;
+    border-radius: 5px;
+    font-size: 0.825rem;
+    color: rgb(133,146,163);
+    background-color: rgb(216, 227, 230);
+}
+
+
+.e3-expense{
+    display: flex;
+    justify-content: space-between;
+}
+
+.expense-chart{
+    width: 261px;
+    height: 191px;
+    margin-top: 25px;
+}
