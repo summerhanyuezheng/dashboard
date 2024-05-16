@@ -23,14 +23,14 @@ export default function DashNestedList({ open }) {
   }
 
   //naviagte handler
-  // const handleNavigation = (path) => {
-  //   navigate(path)
-  // }
+  const handleNavigation = (path) => {
+    navigate(path)
+  }
 
   // Modified navigate handler to open in a new tab
-  const handleNavigation = (path) => {
-    window.open(path, '_blank')
-  }
+  // const handleNavigation = (path) => {
+  //   window.open(path, '_blank')
+  // }
 
 
   
@@ -65,18 +65,19 @@ export default function DashNestedList({ open }) {
             </ListItemIcon>
             <ListItemText primary="Analytics" sx={{ marginLeft: "-22px" }} />
           </ListItemButton>
-          <ListItemButton sx={{ pl: 3 }}>
-            <ListItemIcon>
-              <FiberManualRecordRoundedIcon sx={{ fontSize: "10px", color: "#32475c99" }} />
-            </ListItemIcon>
-            <ListItemText primary="CRM" sx={{ marginLeft: "-22px" }} />
-          </ListItemButton>
           <ListItemButton sx={{ pl: 3 }} onClick={()=>handleNavigation('/ecommerce')}>
             <ListItemIcon>
               <FiberManualRecordRoundedIcon sx={{ fontSize: "10px", color: "#32475c99" }} />
             </ListItemIcon>
             <ListItemText primary="eCommerce" sx={{ marginLeft: "-22px" }} />
           </ListItemButton>
+          <ListItemButton sx={{ pl: 3 }}>
+            <ListItemIcon>
+              <FiberManualRecordRoundedIcon sx={{ fontSize: "10px", color: "#32475c99" }} />
+            </ListItemIcon>
+            <ListItemText primary="CRM" sx={{ marginLeft: "-22px" }} />
+          </ListItemButton>
+          
         </List>
       </Collapse>
     </List>
