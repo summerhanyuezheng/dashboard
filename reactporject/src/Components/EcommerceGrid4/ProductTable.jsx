@@ -287,18 +287,18 @@ const handleClose = () => {
     <TableContainer>
       <Table>
         <TableHead>
-          <TableRow>
-            <TableCell>PRODUCT</TableCell>
-            <TableCell>CATEGORY</TableCell>
-            <TableCell>PAYMENT</TableCell>
-            <TableCell>ORDER STATUS</TableCell>
-            <TableCell>ACTIONS</TableCell>
+          <TableRow >
+            <TableCell sx={{fontSize:"0.75rem",paddingTop:"5px",paddingBottom:'5px',color:'#697a8d',fontWeight:'600'}}>PRODUCT</TableCell>
+            <TableCell sx={{fontSize:"0.75rem",paddingTop:"5px",paddingBottom:'5px',color:'#697a8d',fontWeight:'600'}}>CATEGORY</TableCell>
+            <TableCell sx={{fontSize:"0.75rem",paddingTop:"5px",paddingBottom:'5px',color:'#697a8d',fontWeight:'600'}}>PAYMENT</TableCell>
+            <TableCell sx={{fontSize:"0.75rem",paddingTop:"5px",paddingBottom:'5px',color:'#697a8d',fontWeight:'600'}}>ORDER STATUS</TableCell>
+            <TableCell sx={{fontSize:"0.75rem",paddingTop:"5px",paddingBottom:'5px',color:'#697a8d',fontWeight:'600'}}>ACTIONS</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row, index) => (
-            <TableRow key={index}>
-              <TableCell component="th" scope="row">
+            <TableRow key={index} sx={{paddingTop:"5px"}}>
+              <TableCell sx={{paddingTop:"4px", paddingBottom:"4px"}} component="th" scope="row">
                 <Box display="flex" alignItems="center" gap={2}>
                   {row.imageUrl && (
                     <Avatar
@@ -308,21 +308,21 @@ const handleClose = () => {
                     />
                   )}
                   <Box>
-                    <Typography variant="body1">{row.product}</Typography>
+                    <Typography sx={{fontSize:"1rem", color:"#697a8d"}} variant="body1">{row.product}</Typography>
                     <Typography variant="caption" color="textSecondary">
                       {row.brand}
                     </Typography>
                   </Box>
                 </Box>
               </TableCell>
-              <TableCell>
+              <TableCell sx={{paddingTop:"4px", paddingBottom:"4px"}}>
                 <Box display="flex" alignItems="center" gap={1}>
                   {row.category.icon}
 
-                  <Typography variant="body2">{row.category.label}</Typography>
+                  <Typography sx={{fontSize:"1rem", color:"#697a8d"}}variant="body2">{row.category.label}</Typography>
                 </Box>
               </TableCell>
-              <TableCell>
+              <TableCell sx={{paddingTop:"4px", paddingBottom:"4px"}}>
                 <Typography variant="body1">
                   {renderPaymentInfo(row.payment)}
                 </Typography>
@@ -330,7 +330,7 @@ const handleClose = () => {
                   {row.paymentStatus}
                 </Typography>
               </TableCell>
-              <TableCell>
+              <TableCell sx={{paddingTop:"4px", paddingBottom:"4px"}}> 
                 <Chip
                   label={row.status}
                   sx={{
@@ -356,7 +356,7 @@ const handleClose = () => {
                   variant="filled"
                 />
               </TableCell>
-              <TableCell>
+              <TableCell sx={{paddingTop:"4px", paddingBottom:"4px"}}>
                 <IconButton onClick={(event) => handleClick(event, index)}>
                   <MoreVertIcon />
                 </IconButton>
