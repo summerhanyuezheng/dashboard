@@ -13,6 +13,7 @@
 
 .e4-left{
     width: 864px;
+    height: 435px;
     
 }
 
@@ -22,6 +23,7 @@
     padding: 20px;
     box-sizing: border-box;
     position: relative;
+    height: 435px;
 
 }
 
@@ -42,8 +44,8 @@
 }
 
 .css-1ex1afd-MuiTableCell-root {
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
 }
 
 .css-e784if-MuiTypography-root {
@@ -76,7 +78,7 @@
 .e4-wallet-box{
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 
@@ -107,4 +109,8 @@ padding-bottom: 20px;
     text-align: left;
     margin-top: 20px;
     
+}
+
+.css-0 {
+    height: 44px !important;
 }
