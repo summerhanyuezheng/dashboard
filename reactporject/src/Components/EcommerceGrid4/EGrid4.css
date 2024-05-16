@@ -1,0 +1,110 @@
+.e-grid-row-four{
+    width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    margin-bottom: 30px;
+
+
+}
+
+
+.e4-left{
+    width: 864px;
+    
+}
+
+
+.e4-right{
+    width: 420px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.e4-balance-dropdown{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+
+.css-1ygcj2i-MuiTableCell-root{
+    font-size: 0.75rem !important;
+    line-height: 0 !important;
+    font-family:  "Public Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    font-weight: 600 !important;
+    color: #32475cde !important;
+    
+}
+
+.css-1ex1afd-MuiTableCell-root {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.css-e784if-MuiTypography-root {
+    color: #32475c99 !important;
+}
+
+
+.css-ahj2mt-MuiTypography-root {
+    font-weight: 600 !important;
+    color: rgba(50, 71, 92, 0.6);
+}
+
+
+.css-ol7wxs-MuiTypography-root {
+    font-size: 0.875rem !important;
+    color: rgba(50, 71, 92, 0.38) !important;
+
+
+}
+
+
+.e4-money-wallet-flex{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.e4-wallet-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+
+.e4-money-wallet-flex h3{
+    font-size: 1.25rem;
+    color: rgba(50, 71, 92, 0.87);
+    font-weight: 500;
+}
+.e4-money-wallet-flex h5{
+    font-size: 0.875rem;
+    color: rgba(50, 71, 92, 0.6);
+    font-weight: 400;
+}
+
+.e4-balance-chart{
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(219, 220, 224, 0.828);
+padding-bottom: 20px;
+    
+}
+
+.e4-more-sales{
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    color: rgba(50, 71, 92, 0.6);
+    max-width: 243px;
+    text-align: left;
+    margin-top: 20px;
+    
+}

@@ -9,12 +9,14 @@ export default function ExpenseChart() {
       {
         // label: "none",
         data: [18, 5, 12, 28, 18, 11, 8,10,9,7],
-        backgroundColor: "#696cff"
+        backgroundColor: "#696cff",
+        
       },
       {
         // label: "2022",
         data: [-15, -15, -9, -12, -3, -17, -14,-9,-10,-12],
-        backgroundColor: "rgb(255, 171, 0)"
+        backgroundColor: "rgb(255, 171, 0)",
+        
       }
     ]
   })
